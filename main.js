@@ -7,7 +7,7 @@ function sendWhatsApp(event) {
     const service = form.servico.value;
     const necessidade = form.necessidade.value;
     
-    const message = `Olá, NanoTech! Gostaria de agendar um diagnóstico.%0A%0A*Nome:* ${name}%0A*Contato:* ${contact}%0A*E-mail:* ${email}%0A*Serviço:* ${service}%0A*Necessidade:* ${necessidade}`;
+    const message = `Olá, NanoTech Pro! Gostaria de agendar um diagnóstico.%0A%0A*Nome:* ${name}%0A*Contato:* ${contact}%0A*E-mail:* ${email}%0A*Serviço:* ${service}%0A*Necessidade:* ${necessidade}`;
     
     // Redireciona para o WhatsApp
     window.open(`https://wa.me/5543991059128?text=${message}`, '_blank');
