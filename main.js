@@ -143,7 +143,7 @@ document.getElementById('mobile-menu-btn').addEventListener('click', function() 
     
     if(isHidden) {
         nav.classList.remove('hidden');
-        nav.classList.add('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-bgBase', 'border-b', 'border-borderColor', 'p-6', 'shadow-xl');
+        nav.classList.add('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-bgBase', 'border-b', 'border-borderColor', 'p-6', 'shadow-xl', 'max-h-[85vh]', 'overflow-y-auto');
         nav.querySelector('nav').classList.add('flex-col', 'items-start', 'w-full', 'mb-4');
         nav.querySelector('div').classList.remove('border-l', 'pl-6');
         nav.querySelector('div').classList.add('flex-col', 'w-full', 'items-start');
@@ -160,7 +160,7 @@ document.getElementById('mobile-menu-btn').addEventListener('click', function() 
         
         animation.onfinish = () => {
             nav.classList.add('hidden');
-            nav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-bgBase', 'border-b', 'border-borderColor', 'p-6', 'shadow-xl');
+            nav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-bgBase', 'border-b', 'border-borderColor', 'p-6', 'shadow-xl', 'max-h-[85vh]', 'overflow-y-auto');
             nav.querySelector('nav').classList.remove('flex-col', 'items-start', 'w-full', 'mb-4');
             nav.querySelector('div').classList.add('border-l', 'pl-6');
             nav.querySelector('div').classList.remove('flex-col', 'w-full', 'items-start');
