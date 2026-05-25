@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade | NanoTech Tecnologia</title>
+    <link rel="icon" type="image/png" href="logo_nano.png">
+    
+    <!-- Script Anti-FOUC para carregar o tema antes da renderização -->
+    <script>
+        if (localStorage.getItem('color-theme') === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config com Variáveis Dinâmicas -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        bgBase: 'var(--color-base)',
+                        bgSurface: 'var(--color-surface)',
+                        bgSurface2: 'var(--color-surface2)',
+                        borderColor: 'var(--color-border)',
+                        borderDarker: 'var(--color-border-darker)',
+                        textMain: 'var(--color-text-main)',
+                        textMuted: 'var(--color-text-muted)',
+                        brand: {
+                            light: '#a78bfa',
+                            DEFAULT: '#7c3aed',
+                            dark: '#5b21b6',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Variáveis de Tema: Light Mode */
+        :root {
+            --color-base: #f8fafc;
+            --color-surface: #ffffff;
+            --color-surface2: #f1f5f9;
+            --color-border: #e2e8f0;
+            --color-border-darker: #cbd5e1;
+            --color-text-main: #0f172a;
+            --color-text-muted: #475569;
+            --color-glass: rgba(255, 255, 255, 0.85);
+            --grid-color: #cbd5e1;
+        }
+
+        /* Variáveis de Tema: Dark Mode */
+        .dark {
+            --color-base: #030303;
+            --color-surface: #0d0d0d;
+            --color-surface2: #141414;
+            --color-border: #1a1a1a;
+            --color-border-darker: #222222;
+            --color-text-main: #ffffff;
+            --color-text-muted: #9ca3af;
+            --color-glass: rgba(3, 3, 3, 0.85);
+            --grid-color: #1a1a1a;
+        }
+
+        /* Base Styling */
+        body {
+            background-color: var(--color-base);
+            color: var(--color-text-main);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--color-base); }
+        ::-webkit-scrollbar-thumb { background: var(--color-border-darker); }
+        ::-webkit-scrollbar-thumb:hover { background: #7c3aed; }
+
+        ::selection { background: rgba(124, 58, 237, 0.3); color: var(--color-text-main); }
+
+        .grid-bg {
+            background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.4;
+        }
+
+        .glass-header {
+            background: var(--color-glass);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+        }
+    </style>
+</head>
+<body class="relative selection:bg-brand selection:text-white">
+
+    <!-- Política Section -->
+    <main class="relative min-h-screen pt-12 pb-20 lg:pt-16 lg:pb-32 overflow-hidden z-10 flex flex-col">
+        <div class="absolute inset-0 pointer-events-none grid-bg z-0"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-brand/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
+        <div class="container mx-auto px-6 lg:px-12 relative z-10 max-w-4xl">
+            <h1 class="font-bold text-3xl md:text-5xl leading-[1.1] tracking-tight text-textMain mb-10">
+                Política de Privacidade e Cookies
+            </h1>
+
+            <div class="prose prose-invert max-w-none text-textMuted text-base leading-relaxed space-y-8">
+                <p>
+                    A <strong>NanoTech Tecnologia</strong> valoriza a sua privacidade e se compromete a proteger os dados pessoais que você nos confia. Esta Política explica como coletamos, utilizamos, compartilhamos e protegemos suas informações ao utilizar nosso site e serviços, em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).
+                </p>
+
+                <div>
+                    <h2 class="text-xl font-bold text-textMain mb-4">1. Coleta de Informações</h2>
+                    <p>Coletamos informações das seguintes formas:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li><strong>Dados fornecidos por você:</strong> Ao preencher formulários de contato ou nos chamar via WhatsApp (ex: nome, e-mail, telefone, serviço desejado).</li>
+                        <li><strong>Dados de navegação (Cookies):</strong> Coletamos automaticamente dados de uso, como endereço IP, tipo de navegador, páginas visitadas e tempo de permanência, para fins analíticos e de melhoria contínua da experiência.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-textMain mb-4">2. Uso dos Dados</h2>
+                    <p>As informações coletadas são utilizadas exclusivamente para:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li>Prestar os serviços de manutenção, suporte ou infraestrutura solicitados;</li>
+                        <li>Responder a dúvidas, enviar orçamentos e realizar o atendimento via WhatsApp;</li>
+                        <li>Analisar o desempenho do nosso site e personalizar sua experiência de navegação;</li>
+                        <li>Cumprir obrigações legais e regulatórias aplicáveis.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-textMain mb-4">3. Política de Cookies</h2>
+                    <p>Um "cookie" é um pequeno arquivo de texto salvo no seu dispositivo quando você acessa o nosso site. Nós utilizamos:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li><strong>Cookies Estritamente Necessários:</strong> Fundamentais para o funcionamento da página (ex: lembrar sua preferência de tema escuro ou claro, ou salvar o consentimento deste próprio aviso de cookies).</li>
+                        <li><strong>Cookies de Desempenho e Análise:</strong> Utilizados para entender como os visitantes interagem com o site de forma anônima (ex: Google Analytics), permitindo que possamos melhorar nossa estrutura.</li>
+                    </ul>
+                    <p class="mt-4">
+                        Você pode configurar seu navegador para recusar todos ou alguns cookies. No entanto, desativar cookies necessários pode afetar a funcionalidade e a aparência do site.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-textMain mb-4">4. Compartilhamento de Dados</h2>
+                    <p>
+                        A NanoTech Tecnologia não vende, aluga ou comercializa seus dados pessoais. Podemos compartilhar suas informações estritamente com prestadores de serviço parceiros (ex: plataformas de hospedagem ou ferramentas de análise de tráfego) que processam dados em nosso nome e estão sujeitos a obrigações contratuais de confidencialidade e segurança.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-textMain mb-4">5. Seus Direitos</h2>
+                    <p>Conforme a LGPD, você tem o direito de:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li>Confirmar a existência de tratamento dos seus dados;</li>
+                        <li>Acessar seus dados pessoais que possuímos;</li>
+                        <li>Solicitar a correção de dados incompletos, inexatos ou desatualizados;</li>
+                        <li>Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários.</li>
+                    </ul>
+                    <p class="mt-4">
+                        Para exercer esses direitos, entre em contato através do e-mail: <strong>contato@nanotech.com.br</strong>.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-textMain mb-4">6. Segurança da Informação</h2>
+                    <p>
+                        Implementamos medidas técnicas e organizacionais adequadas para proteger seus dados contra acessos não autorizados, perdas, destruição ou alteração acidental. No entanto, nenhuma transmissão de dados pela internet é 100% segura.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-textMain mb-4">7. Atualizações desta Política</h2>
+                    <p>
+                        Reservamo-nos o direito de alterar esta Política de Privacidade a qualquer momento. Quaisquer atualizações serão publicadas nesta página, e o uso continuado dos nossos serviços após essas alterações indicará a sua concordância.
+                    </p>
+                    <p class="mt-4 text-sm font-semibold">
+                        Última atualização: Maio de 2026.
+                    </p>
+                </div>
+                
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-bgBase border-t border-borderColor py-10 relative z-10 mt-auto">
+        <div class="container mx-auto px-6 lg:px-12 flex flex-col items-center justify-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-6 bg-brand rounded-sm"></div>
+                <span class="font-bold text-xl tracking-tight text-textMain uppercase">Nano<span class="text-gray-500">Tech</span> <span class="text-sm font-medium text-brand dark:text-brand-light normal-case ml-1">Tecnologia</span></span>
+            </div>
+            <p class="text-textMuted text-xs">&copy; 2026 NanoTech Tecnologia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Theme Toggle Logic
+        const themeToggles = document.querySelectorAll('#theme-toggle-desktop, #theme-toggle-mobile');
+        themeToggles.forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const nav = document.querySelector('nav').parentElement; 
+            nav.classList.toggle('hidden');
+            if(!nav.classList.contains('hidden')) {
+                nav.classList.add('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-bgBase', 'border-b', 'border-borderColor', 'p-6', 'shadow-xl');
+                nav.querySelector('nav').classList.add('flex-col', 'items-start', 'w-full', 'mb-4');
+                nav.querySelector('div').classList.remove('border-l', 'pl-6');
+                nav.querySelector('div').classList.add('flex-col', 'w-full', 'items-start');
+            } else {
+                nav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-bgBase', 'border-b', 'border-borderColor', 'p-6', 'shadow-xl');
+                nav.querySelector('nav').classList.remove('flex-col', 'items-start', 'w-full', 'mb-4');
+                nav.querySelector('div').classList.add('border-l', 'pl-6');
+                nav.querySelector('div').classList.remove('flex-col', 'w-full', 'items-start');
+            }
+        });
+    </script>
+</body>
+</html>

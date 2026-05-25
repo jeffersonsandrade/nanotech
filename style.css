@@ -1,0 +1,86 @@
+/* Variáveis de Tema: Light Mode */
+:root {
+    --color-base: #f8fafc; /* slate-50 */
+    --color-surface: #ffffff;
+    --color-surface2: #f1f5f9; /* slate-100 */
+    --color-border: #e2e8f0; /* slate-200 */
+    --color-border-darker: #cbd5e1; /* slate-300 */
+    --color-text-main: #0f172a; /* slate-900 */
+    --color-text-muted: #475569; /* slate-600 */
+    --color-glass: rgb(255 255 255 / 0);
+    --grid-color: #cbd5e1;
+}
+
+/* Variáveis de Tema: Dark Mode */
+.dark {
+    --color-base: #030303;
+    --color-surface: #0d0d0d;
+    --color-surface2: #141414;
+    --color-border: #1a1a1a;
+    --color-border-darker: #222222;
+    --color-text-main: #ffffff;
+    --color-text-muted: #9ca3af; /* gray-400 */
+    --color-glass: rgb(255 255 255 / 0);
+    --grid-color: #1a1a1a;
+}
+
+/* Base Styling */
+body {
+    background-color: var(--color-base);
+    color: var(--color-text-main);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--color-base); }
+::-webkit-scrollbar-thumb { background: var(--color-border-darker); }
+::-webkit-scrollbar-thumb:hover { background: #7c3aed; }
+
+::selection { background: rgba(124, 58, 237, 0.3); color: var(--color-text-main); }
+
+/* Sophisticated Elements */
+.grid-bg {
+    background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.4;
+}
+
+.line-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.3), transparent);
+}
+
+.border-tech {
+    border: 1px solid var(--color-border);
+    transition: border-color 0.3s ease;
+}
+
+.border-tech:hover {
+    border-color: rgba(124, 58, 237, 0.4);
+}
+
+.card-accent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: transparent;
+    transition: background 0.4s ease;
+}
+
+.card-accent:hover::before {
+    background: #7c3aed;
+}
+
+.glass-header {
+    background: rgb(255 255 255 / 0);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+}
