@@ -168,6 +168,20 @@ document.getElementById('mobile-menu-btn').addEventListener('click', function() 
     }
 });
 
+// Auto-close mobile menu when a link or button is clicked
+document.querySelectorAll('header a, header button').forEach(item => {
+    item.addEventListener('click', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        // Ignore if clicking the menu toggle button itself
+        if (item !== btn && !item.closest('#mobile-menu-btn') && window.innerWidth < 1024) {
+            const nav = document.querySelector('header nav').parentElement;
+            if (!nav.classList.contains('hidden')) {
+                btn.click(); // Trigger the close animation
+            }
+        }
+    });
+});
+
 // --- Cookie Banner Logic ---
 document.addEventListener("DOMContentLoaded", () => {
     const cookieBanner = document.getElementById('cookie-banner');
